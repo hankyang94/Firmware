@@ -2,7 +2,7 @@
 #
 # @name KLY-DELTA-X3
 #
-# @type Quadrotor X/H
+# @type Quadrotor X
 # @class Copter
 #
 # @output MAIN1 motor 1 (IO output on PM board)
@@ -20,6 +20,8 @@
 set VEHICLE_TYPE mc
 set MAV_TYPE 2
 
+set PWM_OUT 1234
+
 if [ $AUTOCNF == yes ]
 then
 	param set NAV_ACC_RAD 2.0
@@ -31,6 +33,9 @@ fi
 
 set MIXER kly_delta_x3
 
+set PWM_AUX_OUT 1234
+set PWM_AUX_RATE 50
+
 param set PWM_AUX_DIS1 1000
 param set PWM_AUX_DIS2 2000
 param set PWM_AUX_DIS3 2000
@@ -39,3 +44,4 @@ param set PWM_AUX_FAIL1 1000
 param set PWM_AUX_FAIL2 2000
 param set PWM_AUX_FAIL3 2000
 param set PWM_AUX_FAIL4 1000
+
