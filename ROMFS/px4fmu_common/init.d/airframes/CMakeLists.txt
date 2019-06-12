@@ -82,6 +82,7 @@ px4_add_romfs_files(
 	4080_zmr250
 	4090_nanomind
 	4100_tiltquadrotor
+	4123_kly_delta_x3
 	4250_teal
 	4900_crazyflie
 

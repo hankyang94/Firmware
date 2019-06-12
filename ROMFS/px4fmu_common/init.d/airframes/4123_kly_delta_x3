@@ -1,0 +1,41 @@
+#!nsh
+#
+# @name KLY-DELTA-X3
+#
+# @type Quadrotor X/H
+# @class Copter
+#
+# @output MAIN1 motor 1 (IO output on PM board)
+# @output MAIN2 motor 2
+# @output MAIN3 motor 3
+# @output MAIN4 motor 4
+# @output AUX1 servo motor for rotor 1 wing (FMU output on PM board)
+# @output AUX2 servo motor for rotor 2 wing
+# @output AUX3 servo motor for rotor 3 wing
+# @output AUX4 servo motor for rotor 4 wing
+#
+# @maintainer Hank Yang <hankyang94@gmail.com>
+#
+
+set VEHICLE_TYPE mc
+set MAV_TYPE 2
+
+if [ $AUTOCNF == yes ]
+then
+	param set NAV_ACC_RAD 2.0
+
+	param set RTL_RETURN_ALT 30.0
+	param set RTL_DESCEND_ALT 10.0
+	param set RTL_LAND_DELAY 0
+fi
+
+set MIXER kly_delta_x3
+
+param set PWM_AUX_DIS1 1000
+param set PWM_AUX_DIS2 2000
+param set PWM_AUX_DIS3 2000
+param set PWM_AUX_DIS4 1000
+param set PWM_AUX_FAIL1 1000
+param set PWM_AUX_FAIL2 2000
+param set PWM_AUX_FAIL3 2000
+param set PWM_AUX_FAIL4 1000
