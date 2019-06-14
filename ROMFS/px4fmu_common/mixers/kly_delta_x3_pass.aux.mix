@@ -1,6 +1,6 @@
 # Manual pass through mixer for servo outputs 1-4
 # https://dev.px4.io/master/en/concept/mixing.html
-# I set M to be 0, so that the sum is effectively zeros and only outputs the offset
+# compared to normal pass.aux.mix, I changed the offset 
 
 # AUX1 channel (zero with offset -10000, so that it outputs minimum PWM 1000)
 M: 1

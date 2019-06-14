@@ -20,10 +20,10 @@
 # @maintainer Lorenz Meier <lorenz@px4.io>
 #
 
-# sh /etc/init.d/rc.mc_defaults
+sh /etc/init.d/rc.mc_defaults
 
 ## this is only used for testing with KLY delta X3
-sh /etc/init.d/rc.kly_delta_x3_mc_defaults
+# sh /etc/init.d/rc.kly_delta_x3_mc_defaults
 
 set MIXER quad_x
 

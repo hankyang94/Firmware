@@ -1,0 +1,33 @@
+# KLY Delta X3 quad tilt-wing UAV in quadcopter configuration
+# front 25 vs rear 16.5
+# 16 vs 25
+# forward direction is x, lateral direction is y, downward is z
+
+[info]
+key = "4kly"
+description = "KLY Delta X3 UAV in quadcopter mode. Similar to 4w, with modifications in geometry"
+
+[rotor_default]
+axis      = [0.0, 0.0, -1.0]
+Ct        = 1.0
+Cm        = 0.05
+
+[[rotors]]
+name      = "front_right"
+position  = [0.250, 0.160, 0.0]
+direction = "CCW"
+
+[[rotors]]
+name      = "rear_left"
+position  = [-0.165, -0.250, 0.0]
+direction = "CCW"
+
+[[rotors]]
+name     = "front_left"
+position = [0.250, -0.160, 0.0]
+direction = "CW"
+
+[[rotors]]
+name     = "rear_right"
+position = [-0.165, 0.250, 0.0]
+direction = "CW"

@@ -1,47 +1,28 @@
-#!nsh
+#!/bin/sh
 #
-# @name KLY-DELTA-X3
+# @name KLY Delta X3
 #
-# @type Quadrotor X
+# @type Quadrotor Wide
 # @class Copter
 #
-# @output MAIN1 motor 1 (IO output on PM board)
+# @output MAIN1 motor 1
 # @output MAIN2 motor 2
 # @output MAIN3 motor 3
 # @output MAIN4 motor 4
-# @output AUX1 servo motor for rotor 1 wing (FMU output on PM board)
-# @output AUX2 servo motor for rotor 2 wing
-# @output AUX3 servo motor for rotor 3 wing
-# @output AUX4 servo motor for rotor 4 wing
 #
-# @maintainer Hank Yang <hankyang94@gmail.com>
+# @output AUX1 feed-through of RC AUX1 channel
+# @output AUX2 feed-through of RC AUX2 channel
+# @output AUX3 feed-through of RC AUX3 channel
+# @output AUX4 feed-through of RC FLAPS channel
+#
+# @maintainer Hank Yang (hankyang94@gmail.com)
 #
 
-set VEHICLE_TYPE mc
-set MAV_TYPE 2
+# sh /etc/init.d/rc.mc_defaults
 
-set PWM_OUT 1234
-
-if [ $AUTOCNF == yes ]
-then
-	param set NAV_ACC_RAD 2.0
-
-	param set RTL_RETURN_ALT 30.0
-	param set RTL_DESCEND_ALT 10.0
-	param set RTL_LAND_DELAY 0
-fi
+## this is only used for testing with KLY delta X3
+sh /etc/init.d/rc.kly_delta_x3_mc_defaults
 
 set MIXER kly_delta_x3
 
-set PWM_AUX_OUT 1234
-set PWM_AUX_RATE 50
-
-param set PWM_AUX_DIS1 1000
-param set PWM_AUX_DIS2 2000
-param set PWM_AUX_DIS3 2000
-param set PWM_AUX_DIS4 1000
-param set PWM_AUX_FAIL1 1000
-param set PWM_AUX_FAIL2 2000
-param set PWM_AUX_FAIL3 2000
-param set PWM_AUX_FAIL4 1000
-
+set PWM_OUT 1234

@@ -6,4 +6,4 @@ MAIN 1234 PWM outputs just use default quad 4x mixer file
 ====================================================
 
 MAIN 1234 mixer:
-R: 4x 10000 10000 10000 0
+R: 4kly 10000 10000 10000 0
