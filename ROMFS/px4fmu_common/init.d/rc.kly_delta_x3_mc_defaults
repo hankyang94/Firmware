@@ -15,15 +15,24 @@ then
 	param set RTL_DESCEND_ALT 10
 	param set RTL_LAND_DELAY 0
 
-	param set PWM_MAX 1950
-	param set PWM_MIN 1075
+	param set PWM_MAX 2000
+	param set PWM_MIN 1000
 	param set PWM_RATE 400
 fi
 
 #
 # This is the gimbal pass mixer.
 #
-set MIXER_AUX pass
+set MIXER_AUX kly_delta_x3_pass
 
 set PWM_AUX_OUT 1234
 set PWM_AUX_RATE 50
+
+param set PWM_AUX_DIS1 1000
+param set PWM_AUX_DIS2 2000
+param set PWM_AUX_DIS3 2000
+param set PWM_AUX_DIS4 1000
+param set PWM_AUX_FAIL1 1000
+param set PWM_AUX_FAIL2 2000
+param set PWM_AUX_FAIL3 2000
+param set PWM_AUX_FAIL4 1000
